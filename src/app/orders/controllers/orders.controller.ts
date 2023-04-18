@@ -3,7 +3,7 @@ import ResponseHandler from 'delivertrack-middlewares/utils/network.handler';
 
 const createOrder = (_: Request, res: Response) => {
     try {
-        ResponseHandler.success(res);
+        ResponseHandler.success(res, { message: 'Order created successfully' });
     } catch (error) {
         ResponseHandler.error(res);
     }
@@ -11,7 +11,9 @@ const createOrder = (_: Request, res: Response) => {
 
 const getOrder = (_: Request, res: Response) => {
     try {
-        ResponseHandler.success(res);
+        ResponseHandler.success(res, {
+            message: 'Order retrieved successfully'
+        });
     } catch (error) {
         ResponseHandler.error(res);
     }
@@ -19,7 +21,9 @@ const getOrder = (_: Request, res: Response) => {
 
 const modifyOrder = (_: Request, res: Response) => {
     try {
-        ResponseHandler.success(res);
+        ResponseHandler.success(res, {
+            message: 'Order modified successfully'
+        });
     } catch (error) {
         ResponseHandler.error(res);
     }
@@ -27,7 +31,7 @@ const modifyOrder = (_: Request, res: Response) => {
 
 const deleteOrder = (_: Request, res: Response) => {
     try {
-        ResponseHandler.success(res);
+        ResponseHandler.success(res, { message: 'Order deleted successfully' });
     } catch (error) {
         ResponseHandler.error(res);
     }
